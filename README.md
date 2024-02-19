@@ -2,7 +2,7 @@
 Work on bringing Athena configurations up to speed with xAOD format and component accumulator
 
 #### The goal
-is to look at the tests, take inventory first of what's going on in the tests, and figure out what technologies aren’t being used anymore to get an idea of what’s there and then get an idea of what we can/should change first. There's a lot more tests out there but the two included in the `initial-testing` directory will be a fine start for now. 
+is to look at the tests written by Peter Van Gemmeren, take inventory first of what's going on in the tests, and figure out what technologies aren’t being used anymore to get an idea of what’s there and then get an idea of what we can/should change first. There's a lot more tests out there but the two included in the `initial-testing` directory will be a fine start for now. 
 
 Running the following commands will get you to run the `initial-testing`
 ```
