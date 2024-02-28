@@ -1,8 +1,14 @@
 # modernize-athena-configurations
 Work on bringing Athena configurations up to speed with xAOD format and component accumulator
 
-#### The goal
-is to look at the tests written by Peter Van Gemmeren, take inventory first of what's going on in the tests, and figure out what technologies aren’t being used anymore to get an idea of what’s there and then get an idea of what we can/should change first. There's a lot more tests out there but the two included in the `initial-testing` directory will be a fine start for now. 
+### myAthena
+Athena testing can be difficult to get started with. I tried to make it as simple as possible, for myself at least, to streamline the process no matter where you are in the CERN compute ecosystem. (I'm still updating it, so hopefully it'll be even easier over time)
+
+[myAthena](https://github.com/arthurkraus3/myAthena) is the repo to initialize, modify, and source your own local version of Athena.  
+
+
+### The initial goal
+was to look at the tests written by Peter Van Gemmeren, take inventory first of what's going on in the tests, and figure out what technologies aren’t being used anymore to get an idea of what’s there and then get an idea of what we can/should change first. There's a lot more tests out there but the two included in the `initial-testing` directory will be a fine start for now. 
 
 Running the following commands will get you to run the `initial-testing`
 ```
@@ -25,3 +31,14 @@ total 388
 ```
 
 I won't include ROOT files, but I'll include the (read/write)log.txt in the `initial-testing` directory. 
+
+### Update 24.2.28:
+Create a new algorithm first by running 
+```
+acmd gen-klass --klass MyTestAlgorithm --type reentrant_alg --pkg MyTestPackage --output-file MyTestAlgorithm
+```
+which will create two files in the current dir, a source and header file. They hold a template for `AthReentrantAlgorithm`. `--klass` controls the name of the algo, `--pkg` controls the name of the package (info used in the header file), and `--output-file` controls the name of the `.cxx` and `.h` files. More info with
+```
+acmd gen-klass --help
+```
+Thanks to Serhan Mete for this tip. 
