@@ -42,3 +42,10 @@ which will create two files in the current dir, a source and header file. They h
 acmd gen-klass --help
 ```
 Thanks to Serhan Mete for this tip. 
+
+### Update 24.3.18:
+It must be a part of the athena framework in order to work properly, just running
+```
+python3 AthenaPoolExample_WriteJobOptions.py
+```
+will not work. 
